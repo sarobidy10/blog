@@ -1,0 +1,16 @@
+<div class=" list-group">
+  <ul>
+    <li class="list-group-item" [ngStyle]="{'background': likeIt()}">
+
+      <!--  {{title}}, {{create_date}}, {{content}} -->
+      <h2> {{title}} </h2>
+      <h4> "{{ datePost | async | date: '  EEEE d MMMM  y' }}" </h4>
+      <p>  {{content}} </p> 
+      <button class="btn btn-success" style="margin:10px" (click)="countLike()">Like it</button>
+      <button class="btn btn-danger" style="margin:10px " (click)=" countDislike()">Dislike it</button>
+      <hr>
+      <h6 class="text-success">like: {{ writeLike() }}</h6>
+      <h6 class="text-danger">Dislike: {{ writeDislike() }}</h6>
+    </li>
+  </ul>
+</div>
